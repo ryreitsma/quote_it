@@ -1,0 +1,22 @@
+.quote {
+  width: 75%;
+  padding: 40px;
+}
+
+.quote-content {
+  transform: rotate(-10deg);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: xx-large;
+  transform-origin:right top;
+  writing-mode: tb-rl;
+  float: left;
+}
+
+.quote-author {
+  font-family: 'Kaushan Script', cursive;
+  font-size: x-large;
+  margin: 40px;
+  margin-top: 80px;
+  float: right;
+}
