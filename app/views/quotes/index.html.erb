@@ -1,20 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_quote_path, class: 'btn btn-default'  do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Nieuwe quote toevoegen
+  <% end %>
 
-<h1>Lijst van quotes</h1>
-
-
-<%= link_to 'Nieuwe quote toevoegen', new_quote_path %>
-
-<table>
-  <thead>
+  <h1>Lijst van quotes</h1>
+</div>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
     <tr>
       <th>Auteur</th>
       <th>Quote</th>
       <th colspan="2"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @quotes.each do |quote| %>
       <tr>
         <td class="author-name-column"><%= quote.author_name %></td>
@@ -23,5 +25,6 @@
         <td><%= link_to 'Verwijderen', quote, method: :delete, data: { confirm: 'Weet je het zeker?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
