@@ -13,7 +13,9 @@ bundle
 bin/rake db:create db:schema:load db:seed
 ```
 
-Then run the rails app(`bin/rails s`) and visit http:://lvh.me:3000
+Then run the rails app(`bin/rails s`) and visit http://lvh.me:3000
+
+Want to add some quotes? Visit http://lvh.me:3000/quotes
 
 
 ## Running the specs
