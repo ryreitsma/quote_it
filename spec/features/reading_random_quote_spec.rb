@@ -13,7 +13,7 @@ feature 'Reading a random quote', type: :feature do
     end
 
     specify "I see the name of author of the quote" do
-      expect(page).to have_content quote.author.name
+      expect(page).to have_content quote.author_name
     end
   end
 end
