@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lijst van quotes</h1>
+
+
+<%= link_to 'Nieuwe quote toevoegen', new_quote_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Auteur</th>
+      <th>Quote</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td class="author-name-column"><%= quote.author_name %></td>
+        <td><%= quote.content %></td>
+        <td><%= link_to 'Aanpassen', edit_quote_path(quote) %></td>
+        <td><%= link_to 'Verwijderen', quote, method: :delete, data: { confirm: 'Weet je het zeker?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
